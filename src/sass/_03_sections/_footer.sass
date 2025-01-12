@@ -1,58 +1,59 @@
 .footer
-  background-image: url(@img/footer-elipse.png)
-  background-repeat: no-repeat
-  background-size: 145%
-  background-position: -36rem -3.8rem
+	padding-top: 19rem
+	position: relative
+	overflow: hidden
+	&__bgr
+		position: absolute
+		width: 253.5rem
+		height: 195.4rem
+		left: 50%
+		top: -15rem
+		transform: translateX(-51%)
+		background-image: url(@img/footer-blur_3.png)
+		z-index: -1
 
-  &__inner
-    padding-top: 19rem
-  &__contacts
-    display: flex
-    flex-direction: column
-    align-items: center
-    gap: 7.8rem
-    margin-bottom: 15rem
-  &__title
-    text-align: center
-  &__links
-    display: flex
-    width: 100%
-    justify-content: center
-    gap: 2.5rem
-  &__down
-    height: 37rem
-    background-color: var(--background-color-grey-5)
-    border: var(--border-grey-10)
-    backdrop-filter: blur(206.24998474121094px)
-    border-top-left-radius: 6.4rem
-    border-top-right-radius: 6.4rem
-    position: relative
-    overflow: hidden
-    background-image: url(@img/footer-blur.png)
-    background-repeat: no-repeat
-    background-size: 140%
-    background-position: -332px -600px
+	&__contacts
+		display: flex
+		flex-direction: column
+		align-items: center
+		gap: 7.8rem
+		margin-bottom: 15rem
+	&__title
+		text-align: center
+	&__links
+		display: flex
+		width: 100%
+		justify-content: center
+		gap: 2.5rem
+	&__down
+		height: 37rem
+		background-color: var(--background-color-grey-5)
+		border: var(--border-grey-10)
+		backdrop-filter: blur(4rem)
+		border-top-left-radius: 6.4rem
+		border-top-right-radius: 6.4rem
+		position: relative
+		overflow: hidden
+		&::before
+			content: ""
+			position: absolute
+			background-image: url(@img/logo-big-footer.svg)
+			background-repeat: no-repeat
+			top: 15.7rem
+			left: 10.3rem
+			width: 123.7rem
+			height: 35.2rem
 
-    &::before
-      content: ""
-      position: absolute
-      background-image: url(@img/logo-big-footer.svg)
-      background-repeat: no-repeat
-      top: 15.7rem
-      left: 10.3rem
-      width: 123.7rem
-      height: 35.2rem
-
-  &__top
-    padding-top: 4rem
-    margin-bottom: 7rem
-  &__copyright
-    display: flex
-    justify-content: end
-    gap: 5.9rem
-    font-family: var(--font-family-accent)
-    font-weight: 500
-    font-size: 1.2rem
-    line-height: 1.2
-    letter-spacing: -0.03em
-    opacity: 0.6
+	&__top
+		padding-top: 4rem
+		margin-bottom: 7rem
+	&__copyright
+		display: flex
+		justify-content: end
+		gap: 5.9rem
+		font-family: var(--font-family-accent)
+		font-weight: 500
+		font-size: 1.2rem
+		line-height: 1.2
+		letter-spacing: -0.03em
+		opacity: 0.6
