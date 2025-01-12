@@ -1,7 +1,22 @@
 .menu
 	&__list
 		display: flex
+		align-items: center
 		gap: 3.4rem
 	&__link
 		color: var(--color-light)
 		text-decoration: none
+		font-family: var(--font-family-accent)
+		font-size: 1.4rem
+		line-height: 1.1
+		font-weight: 500
+	@media (max-width: 1439px)
+		&__list
+			gap: 3.0rem
+		&__link
+			font-size: 1.2rem
+	@media (max-width: 699px)
+		&__list
+			gap: 1.6rem
+	@media (max-width: 519px)
+		display: none
