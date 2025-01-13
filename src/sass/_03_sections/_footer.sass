@@ -10,8 +10,9 @@
 		top: -15rem
 		transform: translateX(-51%)
 		background-image: url(@img/footer-blur_3.png)
+		background-size: cover
+		background-repeat: no-repeat
 		z-index: -1
-
 	&__contacts
 		display: flex
 		flex-direction: column
@@ -34,17 +35,17 @@
 		border-top-right-radius: 6.4rem
 		position: relative
 		overflow: hidden
-		&::before
-			content: ""
-			position: absolute
-			background-image: url(@img/logo-big-footer.svg)
-			background-repeat: no-repeat
-			top: 15.7rem
-			left: 10.3rem
-			width: 123.7rem
-			height: 35.2rem
-
-	&__top
+	&__logo
+		position: absolute
+		background-image: url(@img/logo-big-footer.svg)
+		background-repeat: no-repeat
+		// top: 15.7rem
+		bottom: -40%
+		left: 50%
+		transform: translateX(-50%)
+		width: 123.7rem
+		height: 35.2rem
+	&__top.header
 		padding-top: 4rem
 		margin-bottom: 7rem
 	&__copyright
@@ -57,3 +58,27 @@
 		line-height: 1.2
 		letter-spacing: -0.03em
 		opacity: 0.6
+
+@media (max-width: 1439px)
+	.footer
+		padding-top: 15rem
+		&__contacts
+			gap: 6.2rem
+			margin-bottom: 11.7rem
+		&__links
+			gap: 1.6rem
+		&__down
+			height: 28.8rem
+			border-top-left-radius: 5rem
+			border-top-right-radius: 5rem
+		&__top.header
+			padding-top: 2.1rem
+			margin-bottom: 6.7rem
+		&__copyright
+			gap: 4.2rem
+			font-size: 1rem
+		&__logo
+			top: 12.3rem
+
+			// width: 96.3rem
+			// height: 27.3rem
