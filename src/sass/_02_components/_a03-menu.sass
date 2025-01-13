@@ -1,8 +1,11 @@
 .menu
+
 	&__list
 		display: flex
 		align-items: center
 		gap: 3.4rem
+		justify-content: center
+		height: 1.3rem
 	&__link
 		color: var(--color-light)
 		text-decoration: none
@@ -10,6 +13,7 @@
 		font-size: 1.4rem
 		line-height: 1.1
 		font-weight: 500
+
 	@media (max-width: 1439px)
 		&__list
 			gap: 3.0rem
@@ -19,4 +23,5 @@
 		&__list
 			gap: 1.6rem
 	@media (max-width: 519px)
-		display: none
+		order: 1
+		width: 100%
