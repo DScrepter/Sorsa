@@ -1,0 +1,61 @@
+.first-screen
+	padding-top: 10rem
+	position: relative
+	margin-bottom: 10.6rem
+	h1
+		margin: 0 0 3rem
+	&__description
+		max-width: 41rem
+		margin-bottom: 3.5rem
+	&__btn-group
+		display: flex
+		gap: 1.8rem
+		margin-bottom: 11.6rem
+	&__bgr
+		position: absolute
+		width: 100vw
+		max-width: none
+		height: auto
+		top: -6.5rem
+		left: 50%
+		transform: translateX(-50%)
+		z-index: -1
+	&__present-cards
+		display: flex
+		gap: 2rem
+		.present-card__item
+			width: 44rem
+			aspect-ratio: 1
+			flex-grow: 0
+			background-position: center
+			background-repeat: no-repeat
+			background-size: cover
+			text-align: center
+			padding: 26.6rem 3.1rem 0
+			position: relative
+			overflow: hidden
+			border-radius: var(--border-radius-large)
+			.item
+				&__img
+					position: absolute
+				&__title
+					font-family: InterTight
+					font-size: 2.6rem
+					font-weight: 800
+					line-height: 1
+					margin-bottom: 1.6rem
+			&:first-child
+				.item__img
+					width: 29.2rem
+					top: 4.6rem
+					left: 7.4rem
+			&:nth-child(2)
+				.item__img
+					width: 33.1rem
+					top: 4rem
+					left: 3.5rem
+			&:nth-child(3)
+				.item__img
+					width: 24.8rem
+					top: 7rem
+					left: 9.1rem

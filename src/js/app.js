@@ -2,7 +2,7 @@ import * as flsFunction from './modules/functions.js';
 import SmoothScroll from 'smoothscroll-for-websites';
 flsFunction.isWebp();
 
-//если нужен настраиваемы плавный скролл
+// если нужен настраиваемы плавный скролл
 SmoothScroll({
 	animationTime: 1000,
 	stepSize: 200,

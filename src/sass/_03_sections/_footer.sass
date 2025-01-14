@@ -1,18 +1,13 @@
 .footer
-	padding-top: 19rem
+	// padding-top: 19rem
 	position: relative
-	overflow: hidden
 	&__bgr
 		position: absolute
-		width: 254.5rem
-		height: 195.4rem
-		left: 50%
-		top: -15rem
-		transform: translateX(-51%)
-		background-image: url(@img/footer-blur_3.png)
-		background-repeat: no-repeat
-		background-size: contain
+		width: 100%
+		left: 0
+		bottom: 0
 		z-index: -1
+		transform: translate3d(0,0,0)
 	&__contacts
 		display: flex
 		flex-direction: column
@@ -34,7 +29,7 @@
 		height: 37rem
 		background-color: var(--background-color-grey-5)
 		border: var(--border-grey-10)
-		backdrop-filter: blur(9rem)
+		background: url(@img/footer-blur_3.png) no-repeat center / cover
 		border-top-left-radius: 6.4rem
 		border-top-right-radius: 6.4rem
 		position: relative
