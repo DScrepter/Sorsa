@@ -51,62 +51,40 @@
 				margin-top: calc(1em * 0.5 - 3.2rem * 0.5)
 				cursor: pointer
 
-			/*mozilla*/
-			&::-moz-range-thumb
-				width: 3.2rem
-				height: 3.2rem
-				border-radius: 50%
-				border: 2px solid var(--color-light)
-				background: var(--gradient-calc-circle)
-				margin-top: calc(1em * 0.5 - 3.2rem * 0.5)
-				cursor: pointer
+		/*moz*/
+		&::-moz-range-track
+			height: 1em
+			border: none
+			border-radius: 0.5em
+			background: rgba(255, 255, 255, 0.1)
+			background: linear-gradient(120deg, #262626, #262626 10%, transparent 10%, transparent 50%, #262626 50%, #262626 60%, transparent 60%, transparent) 0px/2rem 3rem,linear-gradient(to right,#0752fd,#3bb0ff) 0/var(--sx) 100% no-repeat, #262626
+			box-shadow: none
+		&::-moz-range-thumb
+			width: 3.2rem
+			height: 3.2rem
+			border-radius: 50%
+			border: 2px solid var(--color-light)
+			background: var(--gradient-calc-circle)
+			cursor: pointer
 
-			&::-moz-range-track
-				height: 1em
-				border: none
-				border-radius: 0.5em
-				background: rgba(255, 255, 255, 0.1)
-				background: linear-gradient(120deg, #262626, #262626 10%, transparent 10%, transparent 50%, #262626 50%, #262626 60%, transparent 60%, transparent) 0px/2rem 3rem,linear-gradient(to right,#0752fd,#3bb0ff) 0/var(--sx) 100% no-repeat, #262626
-				box-shadow: none
-
-			/*ms*/
-			&::-ms-fill-upper
-				background: transparent
-				border-color: transparent
-
-			&::-ms-fill-lower
-				background: transparent
-				border-color: transparent
-
-			&::-ms-thumb
-				width: 3.2rem
-				height: 3.2rem
-				border-radius: 50%
-				border: 2px solid var(--color-light)
-				background: var(--gradient-calc-circle)
-				margin-top: calc(1em * 0.5 - 3.2rem * 0.5)
-				cursor: pointer
-				box-sizing: border-box
-
-			&::-ms-track
-				height: 1em
-				border-radius: 0.5em
-				background: rgba(255, 255, 255, 0.1)
-				background: linear-gradient(120deg, #262626, #262626 10%, transparent 10%, transparent 50%, #262626 50%, #262626 60%, transparent 60%, transparent) 0px/2rem 3rem,linear-gradient(to right,#0752fd,#3bb0ff) 0/var(--sx) 100% no-repeat, #262626
-				border: none
-				box-shadow: none
-				box-sizing: border-box
-
-			&::-ms-fill-lower
-				height: 1em
-				border-radius: 0.5em 0 0 0.5em
-				margin: 0
-				background: var(--color-green)
-				border: none
-				border-right-width: 0
+		/*ms*/
+		&::-ms-track
+			height: 1em
+			border: none
+			border-radius: 0.5em
+			background: rgba(255, 255, 255, 0.1)
+			background: linear-gradient(120deg, #262626, #262626 10%, transparent 10%, transparent 50%, #262626 50%, #262626 60%, transparent 60%, transparent) 0px/2rem 3rem,linear-gradient(to right,#0752fd,#3bb0ff) 0/var(--sx) 100% no-repeat, #262626
+			box-shadow: none
+			color: transparent
+		&::-ms-thumb
+			width: 3.2rem
+			height: 3.2rem
+			border-radius: 50%
+			border: 2px solid var(--color-light)
+			background: var(--gradient-calc-circle)
+			cursor: pointer
 
 		.value-tip
-			// margin-left: -38px
 			transform: translateX(calc(-50% - 1.6rem))
 			left: attr(value)
 			padding: 1rem 1.2rem 0.9rem
