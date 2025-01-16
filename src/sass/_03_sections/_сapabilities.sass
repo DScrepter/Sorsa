@@ -1,0 +1,105 @@
+.capabilities
+	margin-bottom: 17rem
+	.section-title
+		margin-bottom: 6rem
+	&__list
+		display: flex
+		flex-wrap: wrap
+		width: 100%
+		margin-inline: -1rem
+		row-gap: 2rem
+	&__item
+		padding-inline: 1rem
+		position: relative
+
+		&-inner
+			margin-inline: -1rem
+			display: flex
+			flex-wrap: wrap
+			row-gap: 2rem
+		&_compose
+			width: 25%
+		&_small
+			height: 13.5rem
+			width: 50%
+			.item
+				&__inner
+					border-radius: 2.75rem
+					background-image: url(@img/cap-bgr-small.png)
+					padding: 1.7rem 2rem
+				&__title
+					font-size: 1.3rem
+					text-align: center
+					margin-top: auto
+				&__img
+					margin-top: auto
+		&_medium
+			width: 100%
+			height: 13.5rem
+			.item
+				&__inner
+					border-radius: 2.75rem
+					background-image: url(@img/cap-bgr-medium.png)
+					align-items: center
+					justify-content: center
+					padding-inline: 3rem
+				&__title
+					text-align: center
+					font-size: 2rem
+		&_large
+			width: 25%
+			height: 29rem
+			.item
+				&__inner
+					border-radius: var(--border-radius-large)
+					padding: 4rem
+				&__title
+					font-size: 2rem
+					text-align: center
+					margin-top: auto
+				&__img
+					margin-top: auto
+		&_xlarge
+			width: 50%
+			height: 29rem
+			.item
+				&__inner
+					border-radius: var(--border-radius-large)
+					background-image: url(@img/cap-bgr-xlarge.png)
+					padding: 4rem
+				&__title
+					font-size: 3.3rem
+					margin-bottom: 1.9rem
+					position: relative
+				&__description
+					width: 20.9rem
+					position: relative
+				&__img
+					position: absolute
+			&_1
+				.item
+					&__img
+						width: 27.6rem
+						top: 3.9rem
+						right: 3.4rem
+			&_2
+				.item
+					&__img
+						width: 34.5rem
+						bottom: 0
+						right: 0
+
+		.item
+			&__inner
+				background-repeat: no-repeat
+				background-position: center
+				background-size: cover
+				height: 100%
+				display: flex
+				flex-direction: column
+				position: relative
+			&__title
+				font-weight: 800
+				line-height: 1
+			&__description
+				opacity: 0.6
