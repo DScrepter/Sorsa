@@ -1,5 +1,4 @@
 .capabilities
-	margin-bottom: 17rem
 	.section-title
 		margin-bottom: 6rem
 	&__list
@@ -12,12 +11,13 @@
 	&__item
 		padding-inline: 1rem
 		position: relative
-
+		overflow: hidden
 		&-inner
 			margin-inline: -1rem
 			display: flex
 			flex-wrap: wrap
 			row-gap: 2rem
+			overflow: hidden
 		&_compose
 			width: 25%
 		&_small
@@ -98,6 +98,7 @@
 				display: flex
 				flex-direction: column
 				position: relative
+				overflow: hidden
 			&__title
 				font-weight: 800
 				line-height: 1
@@ -111,3 +112,161 @@
 			color: inherit
 			text-decoration: none
 			border-bottom: 1px solid var(--color-light)
+	@media (max-width: 1439.98px)
+		.section-title
+			margin-bottom: 4.8rem
+		&__list
+
+			margin-inline: -0.8rem
+			row-gap: 1.6rem
+			margin-bottom: 4.6rem
+		&__item
+			padding-inline: 0.8rem
+			&-inner
+				margin-inline: -0.8rem
+				row-gap: 1.6rem
+			// &_compose
+			// 	width: 25%
+			&_small
+				height: 10.5rem
+				.item
+					&__inner
+						border-radius: 2.1rem
+						padding: 1.4rem 1.8rem
+					&__title
+						font-size: 1rem
+			&_medium
+				height: 10.5rem
+				.item
+					&__inner
+						border-radius: 2.1rem
+						padding-inline: 2.8rem
+					&__title
+						font-size: 1.6rem
+			&_large
+				width: 25%
+				height: 22.6rem
+				.item
+					&__inner
+						padding: 3rem
+					&__title
+						font-size: 1.6rem
+			&_xlarge
+				height: 22.6rem
+				.item
+					&__inner
+						padding: 3.1rem
+					&__title
+						font-size: 2.5rem
+						margin-bottom: 1.5rem
+					&__description
+						width: 17.6rem
+				&_1
+					.item
+						&__img
+							width: 21.5rem
+							top: 3rem
+							right: 2.7rem
+				&_2
+					.item
+						&__img
+							width: 26.8rem
+							bottom: 0
+							right: 0
+
+		&__description
+			width: 39.5rem
+	@media (max-width: 1119.98px)
+		.section-title
+			margin-bottom: 3.9rem
+		&__list
+			width: 48.6rem
+			margin-inline: auto
+			row-gap: 1.6rem
+			margin-bottom: 4.6rem
+		&__item
+			&_compose
+				width: 100%
+			&_small
+				width: 25%
+			&_medium
+				width: 50%
+				.item
+					&__inner
+						padding-inline: 2.5rem
+			&_large
+				width: 50%
+			&_xlarge
+				width: 100%
+		&__description
+			width: 39.5rem
+	@media (max-width: 699.98px)
+		.section-title
+			margin-bottom: 3.1rem
+		&__list
+			width: 100%
+			margin-bottom: 3.1rem
+		&__item
+			&_medium
+				.item
+					&__inner
+						padding-inline: 2.4rem
+	@media (max-width: 519.98px)
+		&__item
+			padding-inline: 0.8rem
+			&-inner
+				margin-inline: -0.8rem
+				row-gap: 1.6rem
+			&_compose
+				width: 100%
+			&_small
+				height: 12.9rem
+				width: 50%
+				.item
+					&__inner
+						border-radius: 2.1rem
+						padding: 1.4rem 1.8rem
+					&__title
+						font-size: 1rem
+			&_medium
+				height: 12.9rem
+				width: 100%
+				.item
+					&__inner
+						border-radius: 2.1rem
+						padding-inline: 2.8rem
+					&__title
+						font-size: 1.6rem
+			&_large
+				width: 100%
+				height: 22.6rem
+				.item
+					&__inner
+						padding: 3rem
+					&__title
+						font-size: 1.6rem
+			&_xlarge
+				height: 22.6rem
+				.item
+					&__inner
+						padding: 3.1rem
+					&__title
+						font-size: 2.5rem
+						margin-bottom: 1.5rem
+					&__description
+						width: 17.6rem
+				&_1
+					.item
+						&__img
+							width: 21.5rem
+							top: 3rem
+							right: 2.7rem
+				&_2
+					.item
+						&__img
+							width: 26.8rem
+							bottom: 0
+							right: 0
+
+		&__description
+			width: 39.5rem

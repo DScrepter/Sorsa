@@ -69,9 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const reviewsSlider = new Swiper('.reviews__slider', {
 		loop: true,
-		slidesPerView: 2,
+		slidesPerView: 'auto',
 		watchSlidesProgress: true,
-
 	});
 
 

@@ -13,19 +13,23 @@
 		background-color: var(--color-dark-10)
 		padding-top: 5rem
 		padding-left: 4rem
+		position: relative
+		height: 43.2rem
 		.item
 			&__title
 				margin-bottom: 1.6rem
 				line-height: 1
-			&__description
-				margin-bottom: 3.6rem
+			&__img
+				position: absolute
 		&:nth-child(1)
 			width: 71.5rem
 			.item
 				&__description
 					max-width: 40.4rem
 				&__img
-					width: 100%
+					width: 72.1rem
+					left: 4.1rem
+					top: 18.3rem
 		&:nth-child(2)
 			width: 50.5rem
 			.item
@@ -33,6 +37,8 @@
 					max-width: 38.5rem
 				&__img
 					width: 42.3rem
+					left: 3.9rem
+					top: 17.7rem
 		&:nth-child(3)
 			width: 50.5rem
 			.item
@@ -40,12 +46,210 @@
 					max-width: 30.5rem
 				&__img
 					width: 44.7rem
-					margin-left: -1.2rem
+					left: 2.8rem
+					top: 20.1rem
 		&:nth-child(4)
 			width: 71.5rem
 			.item
 				&__description
 					max-width: 50rem
 				&__img
-					width: 58.5rem
-					margin-left: 3.2rem
+					width: 60.5rem
+					left: 5.2rem
+					top: 19.2rem
+	@media (max-width: 1439.98px)
+		margin-bottom: 9.1rem
+		h2
+			margin-bottom: 4.7rem
+		&__group
+			row-gap: 1.9rem
+			column-gap: 1.6rem
+		&__item
+			overflow: hidden
+			border-radius: var(--border-radius-large)
+			background-color: var(--color-dark-10)
+			padding-top: 3.9rem
+			padding-left: 3.1rem
+			height: 33.6rem
+			.item
+				&__title
+					margin-bottom: 1.3rem
+			&:nth-child(1)
+				width: 55.3rem
+				.item
+					&__description
+						max-width: 31.5rem
+					&__img
+						width: 56rem
+						left: 3.2rem
+						top: 14.2rem
+			&:nth-child(2)
+				width: 39.1rem
+				.item
+					&__description
+						max-width: 30rem
+					&__img
+						width: 32.8rem
+						left: 3rem
+						top: 13.9rem
+			&:nth-child(3)
+				width: 39.1rem
+				.item
+					&__description
+						max-width: 26rem
+					&__img
+						width: 34.8rem
+						left: 2.2rem
+						top: 15.7rem
+			&:nth-child(4)
+				width: 55.3rem
+				.item
+					&__description
+						max-width: 37.6rem
+					&__img
+						width: 45.5rem
+						left: 3.6rem
+						top: 14.9rem
+	@media (max-width: 1119.98px)
+		margin-bottom: 10rem
+		h2
+			margin-bottom: 4.4rem
+		&__group
+			row-gap: 1.9rem
+			column-gap: 1.6rem
+		&__item
+			padding-top: 3.9rem
+			padding-left: 3rem
+			height: 23.5rem
+			width: 100% !important
+			.item
+				&__title
+					margin-bottom: 1.6rem
+					max-width: 20.8rem
+			&:nth-child(1)
+				.item
+					&__description
+						max-width: 22.9rem
+					&__img
+						width: 56.1rem
+						left: 29rem
+						top: 4.1rem
+			&:nth-child(2)
+				.item
+					&__description
+						max-width: 21rem
+					&__img
+						width: 32.3rem
+						left: 29rem
+						top: 3.8rem
+			&:nth-child(3)
+				.item
+					&__description
+						max-width: 17rem
+					&__img
+						width: 34.8rem
+						left: 29rem
+						top: 5.5rem
+			&:nth-child(4)
+				.item
+					&__description
+						max-width: 21.5rem
+					&__img
+						width: 45.2rem
+						left: 27.6rem
+						top: 2.3rem
+	@media (max-width: 699.98px)
+		margin-bottom: 9.7rem
+		h2
+			margin-bottom: 4.1rem
+		&__group
+			row-gap: 1.6rem
+		&__item
+			padding-top: 3.9rem
+			padding-left: 3.1rem
+			height: 34.6rem
+			width: 100% !important
+			.item
+				&__title
+					margin-bottom: 1.3rem
+					max-width: none
+			&:nth-child(1)
+				.item
+					&__description
+						max-width: 28.1rem
+					&__img
+						left: 16.6rem
+						top: 15.2rem
+			&:nth-child(2)
+				.item
+					&__description
+						max-width: 30.6rem
+					&__img
+						left: 13rem
+						top: 14.6rem
+			&:nth-child(3)
+				.item
+					&__description
+						max-width: 26.6rem
+					&__img
+						left: 12.2rem
+						top: 16.6rem
+			&:nth-child(4)
+				.item
+					&__description
+						max-width: 31.9rem
+					&__img
+						left: 12.4rem
+						top: 13.4rem
+	@media (max-width: 519.98px)
+		margin-bottom: 8rem
+		h2
+			margin-bottom: 3rem
+		&__item
+			padding-top: 2.4rem
+			padding-left: 2rem
+			padding-right: 2rem
+			padding-bottom: 19.6rem
+			height: auto
+
+			text-align: center
+			.item
+				&__title
+					font-size: 2.4rem
+					margin-bottom: 1.3rem
+					max-width: 16.6rem
+					margin-inline: auto
+				&__description
+					margin-inline: auto
+			&:nth-child(1)
+				.item
+					&__description
+						max-width: 22rem
+					&__img
+						width: 45.8rem
+						left: 2.6rem
+						top: 16.6rem
+			&:nth-child(2)
+				.item
+					&__description
+						max-width: 21.8rem
+					&__img
+						width: 24.2rem
+						left: 2.2rem
+						top: 17.9rem
+			&:nth-child(3)
+				.item
+					&__description
+						max-width: 18.9rem
+					&__img
+						width: 25.6rem
+						left: 1.6rem
+						top: 19.2rem
+			&:nth-child(4)
+				.item
+					&__description
+						max-width: 31.9rem
+					&__img
+						width: 31.7rem
+						left: 2.7rem
+						top: 16.7rem
