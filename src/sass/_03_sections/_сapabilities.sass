@@ -4,7 +4,6 @@
 	&__list
 		display: flex
 		flex-wrap: wrap
-		width: 100%
 		margin-inline: -1rem
 		row-gap: 2rem
 		margin-bottom: 6rem
@@ -116,7 +115,6 @@
 		.section-title
 			margin-bottom: 4.8rem
 		&__list
-
 			margin-inline: -0.8rem
 			row-gap: 1.6rem
 			margin-bottom: 4.6rem
@@ -125,8 +123,6 @@
 			&-inner
 				margin-inline: -0.8rem
 				row-gap: 1.6rem
-			// &_compose
-			// 	width: 25%
 			&_small
 				height: 10.5rem
 				.item
@@ -180,7 +176,6 @@
 		.section-title
 			margin-bottom: 3.9rem
 		&__list
-			width: 48.6rem
 			margin-inline: auto
 			row-gap: 1.6rem
 			margin-bottom: 4.6rem
@@ -204,7 +199,7 @@
 		.section-title
 			margin-bottom: 3.1rem
 		&__list
-			width: 100%
+			margin-inline: -0.8rem
 			margin-bottom: 3.1rem
 		&__item
 			&_medium
@@ -212,20 +207,16 @@
 					&__inner
 						padding-inline: 2.4rem
 	@media (max-width: 519.98px)
+		&__list
+			margin-bottom: 2.6rem
 		&__item
-			padding-inline: 0.8rem
-			&-inner
-				margin-inline: -0.8rem
-				row-gap: 1.6rem
-			&_compose
-				width: 100%
 			&_small
 				height: 12.9rem
 				width: 50%
 				.item
 					&__inner
 						border-radius: 2.1rem
-						padding: 1.4rem 1.8rem
+						padding: 1.6rem 2.3rem
 					&__title
 						font-size: 1rem
 			&_medium
@@ -234,34 +225,34 @@
 				.item
 					&__inner
 						border-radius: 2.1rem
-						padding-inline: 2.8rem
+						padding-inline: 2.5rem
 					&__title
-						font-size: 1.6rem
+						font-size: 2rem
 			&_large
 				width: 100%
-				height: 22.6rem
+				height: 27.5rem
 				.item
 					&__inner
-						padding: 3rem
+						padding: 3.8rem
 					&__title
-						font-size: 1.6rem
+						font-size: 2rem
 			&_xlarge
-				height: 22.6rem
+				height: 35.7rem
 				.item
 					&__inner
-						padding: 3.1rem
+						padding: 2.7rem
 					&__title
-						font-size: 2.5rem
-						margin-bottom: 1.5rem
+						text-align: center
 					&__description
-						width: 17.6rem
+						text-align: center
+						margin-inline: auto
 				&_1
 					.item
 						&__img
-							width: 21.5rem
-							top: 3rem
-							right: 2.7rem
+							top: 17.1rem
+							right: 3.6rem
 				&_2
+					height: 37.8rem
 					.item
 						&__img
 							width: 26.8rem
@@ -269,4 +260,4 @@
 							right: 0
 
 		&__description
-			width: 39.5rem
+			width: 22rem
