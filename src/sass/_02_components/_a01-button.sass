@@ -6,6 +6,7 @@
 	text-decoration: none
 	transition: var(--transition-duration)
 	white-space: nowrap
+	transition: 0.3s ease !important
 	&_small
 		height: 6.6rem
 		padding-inline: 5.7rem
@@ -29,24 +30,32 @@
 	&_light
 		color: var(--color-dark)
 		background-color: var(--color-light)
+		&:hover
+			background-color: rgba(255, 255, 255, 0.8)
 	&_dark
 		color: var(--color-light)
 		background-color: var(--color-dark)
 		border: var(--border-light-small)
+		&:hover
+			border-color: rgba(255, 255, 255, 1)
 	&_accent
 		max-width: 14rem
 		width: 100%
 		height: 4.5rem
 		padding-inline: 3.3rem
 		border-radius: 3.4rem
-		background-image: var(--gradient-btn)
+		background: var(--gradient-btn)
+		background-size: 150%
+		background-repeat: repeat
+		background-position: center
 		border: var(--border-grey-10)
 		color: var(--color-light)
 		font-size: 1.4rem
 		font-weight: 500
 		line-height: 1.1
 		letter-spacing: -0.03em
-
+		&:hover
+			background-position: right top
 @media (max-width: 1439.98px)
 	.button, a.button
 		&_accent

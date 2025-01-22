@@ -32,15 +32,16 @@ document.addEventListener('DOMContentLoaded', () => {
 			e.value = closestMark; // Устанавливаем значение на ближайшую отметку
 		}
 		function updateValue() {
+			const val = Math.floor(parseFloat(e.value));
 			e.style.setProperty('--value', e.value);
 			if (spanValue) {
 				const containerWidth = e.offsetWidth;
 				const persentage = (e.value / max);
 
 				spanValue.style.left = (persentage * containerWidth + ((50 - persentage * 100) / 10 * 3)) + "px";
-				spanValue.querySelector('span').innerText = marks[e.value] > 999999 ? (marks[e.value] / 1000000) + 'm' : (marks[e.value] / 1000) + 'k';
+				spanValue.querySelector('span').innerText = marks[val] > 999999 ? (marks[val] / 1000000) + 'm' : (marks[val] / 1000) + 'k';
 			}
-			document.querySelector('.cost__sum .value').innerText = formatNumber(marks[e.value] * 2);
+			document.querySelector('.cost__sum .value').innerText = formatNumber(marks[val] * 2);
 		}
 		function updateContainer(attr, value) {
 			container.setAttribute(attr, formatNumber(value));
@@ -79,7 +80,6 @@ class ScrollAnimation {
 	constructor(selector = '.hidden') {
 		this.selector = selector;
 		window.addEventListener('resize', this.onResize.bind(this));
-
 	}
 	onResize() {
 		const currentHeight = window.innerHeight;
@@ -90,28 +90,23 @@ class ScrollAnimation {
 	}
 	applyAnimations() {
 		const elements = document.querySelectorAll(this.selector);
-
 		elements.forEach((el) => {
 			const animationType = el.getAttribute('data-animation-type') || 'fade';
 			const duration = parseFloat(el.getAttribute('data-animation-duration')) || 1;
 			const delay = parseFloat(el.getAttribute('data-animation-delay')) || 0;
 			const offsetBottom = parseFloat(el.getAttribute('data-animation-offset-bottom')) || 10;
-
 			const rootMargin = `${0}px ${0}px -${(window.innerHeight * offsetBottom) / 100}px ${0}px`;
-
 			el.style.transition = `opacity ${duration}s ease`;
 			el.style.opacity = '0';
 			if (animationType === 'slide') {
 				el.style.transition += `, transform ${duration}s ease`;
 				el.style.transform = 'translateY(10%)';
 			}
-
 			const observerOptions = {
 				root: null,
 				rootMargin: rootMargin,
 				threshold: 0.1,
 			};
-
 			const observer = new IntersectionObserver((entries) => {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
@@ -124,11 +119,9 @@ class ScrollAnimation {
 					}
 				});
 			}, observerOptions);
-
 			observer.observe(el);
 		});
 	}
-
 	updateObserver() {
 		const elements = document.querySelectorAll(this.selector);
 		elements.forEach((el) => {
@@ -136,7 +129,6 @@ class ScrollAnimation {
 			const duration = parseFloat(el.getAttribute('data-animation-duration')) || 1;
 			const delay = parseFloat(el.getAttribute('data-animation-delay')) || 0;
 			const offsetBottom = parseFloat(el.getAttribute('data-animation-offset-bottom')) || 10;
-
 			const rootMargin = `${0}px ${0}px -${(window.innerHeight * offsetBottom) / 100}px ${0}px`;
 			el.style.transition = `opacity ${duration}s ease`;
 			el.style.opacity = '0';
@@ -144,13 +136,11 @@ class ScrollAnimation {
 				el.style.transition += `, transform ${duration}s ease`;
 				el.style.transform = 'translateY(10%)';
 			}
-
 			const observerOptions = {
 				root: null,
 				rootMargin: rootMargin,
 				threshold: 0.5,
 			};
-
 			const observer = new IntersectionObserver((entries) => {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
@@ -163,7 +153,6 @@ class ScrollAnimation {
 					}
 				});
 			}, observerOptions);
-
 			observer.observe(el);
 		});
 	}
