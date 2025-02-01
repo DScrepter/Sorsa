@@ -119,25 +119,25 @@ document.querySelector('.meme__form_code form').addEventListener('submit', (e) =
 	containers.forEach((container, index) => {
 		animateRemainingBlocks(container, index);
 	});
-	console.log(globalNextBlocks);
 
 	let timelineCodeEnter = gsap.timeline();
-	timelineCodeEnter.to(".background-container_img", { zIndex: 20, duration: 0.3 });
-	timelineCodeEnter.to(".meme__form_code", { zIndex: 1, duration: 0.3 });
-	timelineCodeEnter.to(".meme__form_login", { top: '50%', duration: 1, ease: "power1.out" });
-	timelineCodeEnter.to(".meme__form_code", {
-		opacity: 0, duration: 0.3, onComplete: () => {
-			document.querySelector('.meme__form_code').style.display = 'none';
-		}
-	}, '>');
+	// timelineCodeEnter.to(".background-container_img", { zIndex: 20, duration: 0.3 });
+	// timelineCodeEnter.to(".meme__form_code", { zIndex: 1, duration: 0.3 });
+	timelineCodeEnter.to(".meme__form_code", { top: '150%', duration: 0.5, ease: "power1.out" });
+	timelineCodeEnter.to(".meme__form_login", { top: '50%', duration: 1, ease: "power1.out" }), '<';
+	// timelineCodeEnter.to(".meme__form_code", {
+	// 	opacity: 0, duration: 0.3, onComplete: () => {
+	// 		document.querySelector('.meme__form_code').style.display = 'none';
+	// 	}
+	// }, '>');
 });
 document.getElementById('telegramButton').addEventListener('click', function () {
 	globalNextBlocks.forEach((block, index) => {
 		animateBlockFinish(block, index);
 	});
 	let timelineTelegram = gsap.timeline();
-	timelineTelegram.to(".meme__form_login", { top: '150%', duration: 0.5 });
-	timelineTelegram.to(".meme__form_finish", { top: '43%', duration: 1, ease: "power1.out" }, '<');
+	timelineTelegram.to(".meme__form_login", { top: '150%', duration: 0.5, ease: "power1.out" });
+	timelineTelegram.to(".meme__form_finish", { top: '43%', duration: 0.8, ease: "power1.out" }, '<');
 });
 document.getElementById('copyButton').addEventListener('click', function () {
 	const referralLink = document.getElementById('referralLink').innerText;
