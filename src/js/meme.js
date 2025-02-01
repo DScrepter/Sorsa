@@ -122,7 +122,7 @@ document.querySelector('.meme__form_code form').addEventListener('submit', (e) =
 
 	let timelineCodeEnter = gsap.timeline();
 	// timelineCodeEnter.to(".background-container_img", { zIndex: 20, duration: 0.3 });
-	// timelineCodeEnter.to(".meme__form_code", { zIndex: 1, duration: 0.3 });
+	timelineCodeEnter.to(".meme__form_code", { zIndex: 1, duration: 0.3 });
 	timelineCodeEnter.to(".meme__form_code", { top: '150%', duration: 0.5, ease: "power1.out" });
 	timelineCodeEnter.to(".meme__form_login", { top: '50%', duration: 1, ease: "power1.out" }), '<';
 	// timelineCodeEnter.to(".meme__form_code", {
