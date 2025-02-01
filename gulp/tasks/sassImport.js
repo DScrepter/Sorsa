@@ -23,10 +23,15 @@ export const generateSassImports = (done) => {
 	try {
 		const files = getSassFiles(app.path.src.sassFolder);
 		const imports = files.map((file) => {
-			const relativePath = nodePath.relative(nodePath.dirname(app.path.src.sass), file).replace(/\\/g, '/');
-			return `@use "${relativePath}"`;
+			const relativePath = file
+				.replace(app.path.src.sassFolder + '\\', '')
+				.replace('src\\sass\\', '')
+				.replace(/\\/g, '/');
+			return `@use "${relativePath}" as *`;
 		}).join('\n');
-		fs.writeFileSync(app.path.src.sass, imports);
+
+		const mainSassFile = nodePath.join(app.path.src.sassFolder, 'style.sass');
+		fs.writeFileSync(mainSassFile, imports);
 	} catch (error) {
 		console.error('Error generating SASS imports:', error);
 	}

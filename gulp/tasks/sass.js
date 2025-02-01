@@ -8,7 +8,6 @@ import webpcss from 'gulp-webpcss';
 const sass = gulpSass(dartSass);
 
 export const sas = () => {
-
 	return app.gulp.src(app.path.src.sass, { sourcemaps: app.isDev })
 		.pipe(app.plugins.plumber(
 			app.plugins.notify.onError({
@@ -16,11 +15,11 @@ export const sas = () => {
 				message: "Error: <%= error.message %>"
 			})
 		))
-
 		.pipe(sass({
 			silenceDeprecations: ['legacy-js-api'],
 			outputStyle: 'expanded'
 		}))
+		.pipe(app.plugins.replace(/@img\//g, '../img/'))
 		.pipe(
 			app.plugins.if(
 				app.isBuild,
@@ -46,7 +45,6 @@ export const sas = () => {
 				})
 			)
 		)
-		.pipe(app.plugins.replace(/@img\//g, '../img/'))
 		.pipe(app.gulp.dest(app.path.build.css))
 		.pipe(
 			app.plugins.if(

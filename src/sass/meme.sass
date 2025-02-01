@@ -1,0 +1,394 @@
+@font-face
+	font-family: Inter
+	font-display: swap
+	src: url("../fonts/Inter-ExtraBold.woff2") format("woff2"), url("../fonts/Inter-ExtraBold.woff") format("woff")
+	font-weight: 800
+	font-style: normal
+:root
+	--font-family-meme: 'Inter', sans-serif
+	--color-dark: #000000
+	--color-light: #fff
+/* Для Firefox */
+*
+	scrollbar-width: none
+
+/* Для Chrome, Safari и других браузеров на основе webkit */
+*::-webkit-scrollbar
+	width: 0
+	display: none
+
+html
+	font-size: min(0.6944444vw, 1.2vh, 10px)
+body
+	width: 100vw
+	height: 100vh
+	overflow: hidden
+// Размеры шрифтов
+[data-font="large"]
+	font-size: 13.7rem
+
+[data-font="medium"]
+	font-size: 11.3rem
+
+[data-font="small"]
+	font-size: 3.6rem
+
+// Фоны
+[data-bg="gradient"]
+	background: linear-gradient(332deg, #38CCE8 23.79%, #044CFE 60.42%, #8C7AFE 94.24%), #D9D9D9
+
+[data-bg="blue"]
+	background: #044CFE
+
+[data-bg="green"]
+	background: #06F505
+
+[data-bg="cyan"]
+	background: #38CCE8
+
+[data-bg="purple"]
+	background: #7C75FE
+
+[data-bg="lightblue"]
+	background: #259CF0
+
+[data-bg="white"]
+	background: #fff
+
+.header
+	position: relative
+	color: #fff
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: min(3.5rem, 3vh) min(2.3rem, 2vh) 0
+	.header__tag
+		font-size: min(3.2rem, 3vh)
+		line-height: 1
+		text-transform: uppercase
+		letter-spacing: 0.01em
+		opacity: 0.2
+
+.meme
+	background-color: var(--color-dark)
+	background-size: cover
+	font-family: var(--font-family-meme)
+	color: var(--color-dark)
+	font-weight: 800
+	line-height: 1
+	&__wrapper
+		position: fixed
+		width: 100vw
+		height: 100vh
+		overflow: hidden
+		top: 0
+		left: 0
+	.background-container
+		position: absolute
+		pointer-events: none
+		top: 0
+		left: 0
+		width: 100vw
+		height: 100vh
+		overflow: hidden
+		// z-index: 1
+		&_meme
+			.meme__item
+				padding: 2.2rem 4.6rem 2.2rem 2.2rem
+		&_img
+			.meme__item
+				img
+					width: 10rem
+					height: auto
+	&__item
+		position: absolute
+		white-space: nowrap
+
+		line-height: 1
+		visibility: hidden
+	&__content
+		position: relative
+		height: 100%
+		padding-bottom: min(18.7rem, 11vh)
+	&__img
+		z-index: 0
+		position: relative
+		width: auto
+		height: min(18.7vh, 20.2rem)
+		margin-inline: auto
+		flex-shrink: 1
+		transform-origin: top center
+	&__form
+		position: absolute
+		margin-inline: auto
+		flex-grow: 0
+		flex-shrink: 0
+		margin-top: auto
+		margin-bottom: auto
+		left: 50%
+		top: min(39.4rem, 37vh)
+		transform: translateX(-50%)
+		&_code
+			z-index: 11
+			width: min(57.2rem, 53vh)
+			padding-top: min(5.378rem, 5.1vh)
+			padding-inline: min(5.834rem, 5.4vh)
+			.meme__form_inner
+				height: 97%
+			button
+				border: 2px solid var(--color-dark) !important
+		&_login
+			z-index: 30
+			width: min(57.2rem, 53vh)
+			padding-top: min(12.1rem, 11vh)
+			padding-bottom: min(5.3rem, 5vh)
+			padding-inline: min(5.834rem, 5.4vh)
+			top: -100%
+			transform: translate(-50%, -50%)
+			.meme__form_inner
+				height: 100%
+				img
+					position: absolute
+					width: min(9.378rem, 8.8vh)
+					height: auto
+					top: 0
+					left: 50%
+					transform: translate(-47%, -40%)
+		&_finish
+			z-index: 100
+			width: min(77.6rem, 72vh)
+			height: min(43.3rem, 40vh)
+			padding-top: min(4.1rem, 4vh)
+			padding-inline: min(7.1rem, 6.5vh)
+			top: -100%
+			transform: translate(-50%, -50%)
+			display: flex
+			flex-direction: column
+			align-items: center
+			.meme__form_inner
+				height: 100%
+		&_inner
+			position: absolute
+			width: 100%
+			top: 0
+			left: 0
+			z-index: -1
+			svg
+				width: 100%
+				height: 100%
+				path
+					fill: #fff
+		&_title
+			font-size: min(4.2rem, 4vh)
+			text-align: center
+			letter-spacing: -0.02516em
+			margin-bottom: min(3.8rem, 3.6vh)
+		&_desc
+			font-size: min(2rem, 2.2vh)
+			text-align: center
+			letter-spacing: -0.02516em
+			margin-bottom: min(2.7rem, 2.5vh)
+			opacity: 0.3
+		&_referral
+			display: flex
+			justify-content: space-between
+			align-items: center
+			width: 100%
+			height: min(10.3rem, 9.6vh)
+			padding-left: min(4.7rem, 4.4vh)
+			border-radius: min(5.15rem, 5vh)
+			background: #F4F4F4
+			&_title
+				font-size: min(3.2rem, 3vh)
+				letter-spacing: -0.02516em
+				text-transform: uppercase
+			button
+				width: min(10.3rem, 9.6vh)
+				height: min(10.3rem, 9.6vh)
+				border-radius: 100%
+				background: #06F505
+				border: none
+				padding: 0
+				display: flex
+				align-items: center
+				justify-content: center
+		input
+			display: block
+			width: 100%
+			margin-inline: auto
+			margin-bottom: min(12.108rem, 10vh)
+			height: min(10.3rem, 9.6vh)
+			border-radius: min(5.1rem, 5vh)
+			background: #F4F4F4
+			border: none
+			padding-inline: min(1rem, 1vw)
+			font-size: min(3.2rem, 3vh)
+			letter-spacing: -0.02516em
+			text-align: center
+			text-transform: uppercase
+
+			&::placeholder
+				color: rgba(0,0,0,0.2)
+		&_button
+			position: relative
+			width: 100%
+			img
+				position: absolute
+				width: min(9.378rem, 8.8vh)
+				height: auto
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -130%)
+			button
+				width: 100%
+				height: min(11.5rem, 10.7vh)
+				margin-inline: auto
+				display: block
+				border-radius: min(5.7rem, 5.4vh)
+				background: #06F505
+				border: none
+				font-size: min(3.2rem, 3vh)
+				text-transform: uppercase
+				letter-spacing: -0.02516em
+				padding: 0
+		&_levels-wrapper
+			width: 100%
+			height: min(5rem, 4.7vh)
+			margin-top: auto
+			position: relative
+		&_levels
+			position: absolute
+			width: 100%
+			top: 0
+			left: 0
+			&_item
+				display: flex
+				justify-content: space-between
+				align-items: center
+				width: 100%
+				height: min(10.3rem, 9.6vh)
+				border-radius: min(5.15rem, 5vh)
+				background: var(--color-light)
+				padding-left: min(4.4rem, 4.4vh)
+				padding-right: min(3.3rem, 3vh)
+				&_title
+					font-size: min(2.7rem, 2.5vh)
+					opacity: 0.5
+					position: relative
+					padding-left: min(3.6rem, 3.4vh)
+					&::before
+						content: ''
+						position: absolute
+						width: min(2.4rem, 2.2vh)
+						height: 100%
+						aspect-ratio: 1/1
+						background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7.25 7C7.25 4.381 9.381 2.25 12 2.25C14.619 2.25 16.75 4.381 16.75 7C16.75 9.619 14.619 11.75 12 11.75C9.381 11.75 7.25 9.619 7.25 7ZM15 13.25H9C5.83 13.25 3.25 15.83 3.25 19C3.25 20.517 4.483 21.75 6 21.75H18C19.517 21.75 20.75 20.517 20.75 19C20.75 15.83 18.17 13.25 15 13.25Z" fill="black"/></svg>') no-repeat center center /contain
+						top: 50%
+						left: 0
+						transform: translateY(-50%)
+				&_value
+					font-size: min(4.8rem, 4.5vh)
+	button
+		color: var(--color-dark)
+
+@media (max-width: 1119.98px)
+	html
+		font-size: 1.42857143vw
+	// Размеры шрифтов
+	[data-font="large"]
+		font-size: 10rem
+
+	[data-font="medium"]
+		font-size: 9rem
+
+	[data-font="small"]
+		font-size: 2.8rem
+
+	.header
+		padding: 2rem 1.5rem
+		.header__tag
+			font-size: 1.8rem
+	.meme
+		.background-container
+			&_meme
+				.meme__item
+					padding: 1.6rem 3.6rem 1.6rem 1.6rem
+			&_img
+				.meme__item
+					img
+						width: 8rem
+
+		&__content
+			padding-bottom: 0
+		&__img
+			height: 19.7rem
+		&__form
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			&_code
+				width: 70%
+				padding-top: 5.5rem
+				padding-inline: 5rem
+			&_login
+				width: 70%
+				padding-top: 11rem
+				padding-bottom: 5rem
+				padding-inline: 5rem
+				top: -100%
+				.meme__form_inner
+					img
+						width: 8.8rem
+						transform: translate(-47%, -34%)
+			&_finish
+				width: 90%
+				height: auto
+				padding-top: 4rem
+				padding-inline: 4.7rem
+				top: -100%
+			&_title
+				font-size: 3.6rem
+				margin-bottom: 3rem
+			&_desc
+				font-size: 1.8rem
+				margin-bottom: 2.5rem
+				opacity: 0.3
+			&_referral
+				height: 9.6rem
+				padding-left: 	2.8rem
+				border-radius: 5rem
+				&_title
+					font-size: 2rem
+				button
+					width: 9.6rem
+					height: 9.6rem
+
+			input
+				margin-bottom: 10rem
+				height: 9.6rem
+				border-radius: 5rem
+				font-size: max(2.8rem, 16px)
+			&_button
+				img
+					width: 8.8rem
+					transform: translate(-50%, -130%)
+				button
+					height: 9.6rem
+					font-size: 2.8rem
+			&_levels-wrapper
+				width: 100%
+				height: 5rem
+				margin-top: 3rem
+			&_levels
+				&_item
+					height: 9.6rem
+					border-radius: 5rem
+					padding-left: 2.8rem
+					padding-right: 2.2rem
+					&_title
+						font-size: 2.7rem
+						padding-left: 2.8rem
+						&::before
+							width: 2.4rem
+					&_value
+						font-size: 4rem

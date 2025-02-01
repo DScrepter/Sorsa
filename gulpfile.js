@@ -9,6 +9,8 @@ import debounce from 'lodash.debounce';
 
 import chokidar from 'chokidar';
 // Передаем значения в глобальную переменную
+
+process.noDeprecation = true;
 global.app = {
 	isBuild: process.argv.includes('--build'),
 	isDev: !process.argv.includes('--build'),
